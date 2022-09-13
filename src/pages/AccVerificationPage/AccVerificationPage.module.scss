@@ -1,0 +1,45 @@
+.notAuthContent{
+  margin-top: 50px;
+  background-color: #18212A;
+  border-radius: 20px;
+  position: relative;
+  width: 100%;
+}
+
+.notAuthTitle{
+  font-weight: bold;
+  text-align: center;
+}
+
+.notAuthText{
+  text-align: center;
+  margin-top: 20px;
+}
+
+.subscribe{
+  text-decoration: none;
+  color: var(--tg-theme-button-text-color);
+}
+
+.notAuthBtn{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-top: 15px;
+  background-color: var(--tg-theme-button-color);
+  color: var(--tg-theme-button-text-color);
+}
+.preloader{
+  text-align: center;
+  margin-top: 50vh;
+}
+.preloader > i{
+  font-size: 40px;
+}
+
+.d-none{
+  display: none;
+}

@@ -1,0 +1,131 @@
+.swiper{
+  margin-top: 20px;
+  position: relative;
+  transition: opacity 0.1s ease-in-out;
+}
+
+.swiperCards{
+  flex-grow: 1;
+  height: 400px;
+}
+
+.cardInfo{
+  background-color: #17212B;
+  border-radius: 10px;
+  padding: 20px 0 20px 0 ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  z-index: 2;
+  transition: all 0.3s ease-in-out;
+}
+.posAbsolute{
+  position: absolute;
+  background-color: #17212B;
+  border-radius: 10px;
+  padding: 20px 0 20px 0 ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 283px;
+  width: 100%;
+  z-index: 2;
+  transition: all 0.3s ease-in-out;
+}
+.cardInfo > img {
+  width: 80px;
+  border-radius: 100%;
+}
+
+#cardTitle{
+  margin: 30px 10px 5px 10px;
+  text-align: center;
+}
+
+.cardSubTitle{
+  color: #4978A9;
+  margin: 5px 0 5px 0;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 500;
+
+}
+.p10{
+  padding: 10px;
+}
+
+.cardInputContent{
+  border: 1px solid #414955;
+  border-radius: 10px;
+  width: 90%;
+  overflow-y: scroll;
+
+}
+.title{
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+.text{
+  text-align: center;
+  padding-top: 20px;
+}
+.cardInputContent > .p10 > input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+.swiperButtons{
+  position: absolute;
+  z-index: 5;
+  bottom: 15px;
+  width: 100%;
+  display: flex;
+
+}
+
+.falseBtn{
+  font-size: 40px;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(0deg, rgba(165,42,100,1) 0%, rgba(174,57,61,1) 88%);
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.falseBtn > i{
+  border-radius: 100%;
+  border: 2px solid #fff;
+}
+
+.trueBtn{
+  position: relative;
+  font-size: 40px;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(180deg, rgba(30,147,81,1) 0%, rgba(16,141,161,1) 62%);
+  margin-left: auto;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.trueBtn > i{
+  font-size: 50px;
+}
+
+.coutOfTry{
+  position: absolute;
+
+  font-size: 15px;
+}
