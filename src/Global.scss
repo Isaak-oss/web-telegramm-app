@@ -4,14 +4,14 @@ body{
   font-size: 14px;
   line-height: 16px;
   font-weight: 400;
-  background-color: var(--tg-theme-bg-color);
+  background-color: var(--tg-theme-secondary-bg-color);
   color: var(--tg-theme-text-color);
   color-scheme: var(--tg-color-scheme);
   margin: 0;
   padding: 0;
   width: 1px;
   min-width: 100%;
-
+  min-height: 100vh;
   --block-bg-color: var(--tg-theme-bg-color);
   --bg-color: #ebedf0;
   --animation: .15s ease;
@@ -32,10 +32,9 @@ body{
 }
 
 html.dark body {
-  --block-bg-color: var(--tg-theme-bg-color);
+  --block-bg-color: var(--tg-theme-secondary-bg-color);
   background-color: #232E3C;
   color: #fff !important;
-
 }
 
 html, body {
@@ -53,7 +52,7 @@ html, body {
 }
 
 .content{
-  background-color: #fff;
+  background-color: var(--tg-theme-bg-color);
   margin-top: 50px;
   border-radius: 20px;
   position: relative;
@@ -62,7 +61,7 @@ html, body {
 
 html.dark .content{
   margin-top: 50px;
-  background-color: #18212A;
+  background-color: var(--tg-theme-bg-color);
   border-radius: 20px;
   position: relative;
   width: 100%;
@@ -73,9 +72,9 @@ html.dark .content{
 
 }
 
-.logo{
-  //width: 135px;
-  //height: 45px;
+.logo > img{
+
+  height: 40px;
 
 }
 
@@ -90,18 +89,18 @@ html.dark .content{
   justify-content: center;
   width: 40px;
   height: 40px;
-  border-radius: 15px;
-  background-color: #17212B;
-
+  border-radius: 7px;
+  background-color: var(--tg-theme-bg-color);
+  position: relative;
 }
 .chatLink > a{
   text-decoration: none;
 }
 
 .chatLink > a > i{
-  font-size: 20px;
+  font-size: 19px;
   background: transparent;
-  color: #fff;
+  color: var(--tg-theme-text-color);
 }
 
 .profileLink{
@@ -111,11 +110,11 @@ html.dark .content{
   width: 40px;
   height: 40px;
   border-radius: 100%;
-  background-color: #17212B;
+  background-color: var(--tg-theme-bg-color);
 }
 
 .profileLink > a >img{
-  border: 3px solid #fff;
+  border: 3px solid var(--tg-theme-bg-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -123,11 +122,12 @@ html.dark .content{
   height: 40px;
   border-radius: 100%;
   background-color: #F1F5F9;
+  object-fit: cover;
 }
 
 html.dark .profileLink > a > img{
   border: 3px solid black;
-  background-color: #fff;
+  background-color: transparent;
 }
 
 .profileLink > a{
@@ -149,7 +149,82 @@ html.dark .profileLink > a > img{
 }
 
 .footer{
-  margin-top: 20px;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  margin-top: 55px;
+}
+
+.relNone{
+  position: static !important;
+}
+
+//main
+.posAbsolute{
+  position: absolute;
+  background-color: yellow;  //var(--tg-theme-bg-color);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  transition: all 0.3s ease-in-out;
+}
+html.dark .posAbsolute{
+  background-color: var(--tg-theme-bg-color);
+}
+
+.cardInfo{
+  background-color: var(--tg-theme-bg-color);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  z-index: 2;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+html.dark .cardInfo{
+  background-color: #17212B;
+}
+.cardTitle{
+  margin: 10px 0;
+}
+
+.cardInfo > img {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  background-color: #fff;
+  object-fit: cover;
+}
+
+//profile
+
+.pencil{
+  position: absolute;
+  border: 3px solid #fff;
+  z-index: 2;
+  margin-top: -25px;
+  margin-left: 47px;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: skyblue;
+}
+.pencil > i{
+  color:  var(--tg-theme-bg-color);
+}
+html.dark .pencil{
+  border: 3px solid #18212A;
 }
 
 @media (max-width: 1024px){

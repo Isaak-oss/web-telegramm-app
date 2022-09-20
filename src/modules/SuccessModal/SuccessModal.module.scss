@@ -14,7 +14,7 @@
   left: 0;
   right: 0;
   top: 30vh;
-  background-color: #18212A;
+  background-color: var(--tg-theme-bg-color);
   border-radius: 20px;
 }
 .wrap{
@@ -49,14 +49,14 @@
 .close{
   display: flex;
   justify-content: flex-end;
-  color: #169CD5;
+  color: var(--tg-theme-text-color);
 
 }
 .close > button{
   background-color: transparent;
   border: none;
   border-radius: 10px;
-  color: #169CD5;
+  color: var(--tg-theme-text-color);
   padding: 7px 13px;
   font-size: 16px;
   font-weight: 500;
@@ -64,5 +64,4 @@
 }
 .close > button:hover{
   background-color: rgba(22, 156, 213, 0.2);
-
 }

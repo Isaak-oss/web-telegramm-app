@@ -4,13 +4,14 @@ import s from "../../pages/AccVerificationPage/AccVerificationPage.module.scss"
 
 const AccVerification = () => {
     let isSubscribed = useSelector((state) => state.auth.isSubscribed)
-    let userName = useSelector((state) => state.auth.setUserName)
+    let userName = useSelector((state) => state.auth.userName)
     return (
         <div className="container">
             <div className="content">
                 <div className="wrap">
                     <div className={s.notAuthTitle}>
-                        {!isSubscribed ? "Упс, так не пойдет" : `Упс, ${userName}, так не получится`}
+                        {!isSubscribed ? "Упс, так не пойдет"
+                            : `Упс, ${userName}, так не получится`}
                     </div>
                     <div className={s.notAuthText} >
                         {!isSubscribed ?
